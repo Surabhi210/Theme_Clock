@@ -131,3 +131,15 @@ body {
   transition: all 0.5s ease-in;
   font-size: 32px;
 }
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* Add these lines for the circle */
+  border: 4px solid var(--primary-color);
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in;
+}
