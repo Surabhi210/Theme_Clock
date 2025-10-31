@@ -9,14 +9,14 @@
   --secondary-color: #fff;
 }
 
-html {
-  transition: all 0.5s ease-in;
+html {  /* on html since switching themes */
+  transition: all 0.5s ease-in;   /* happen smoothly not instantly */
 }
 
 html.dark {
   --primary-color: #fff;
   --secondary-color: #333;
-  background-color: #111;
+  background-color: #000;
   color: var(--primary-color);
 }
 
@@ -53,7 +53,8 @@ body {
 }
 
 .clock {
-  position: relative;
+  position: relative;  
+  /* for needles to be relative to clock nd not entire page */
   width: 200px;
   height: 200px;
 }
@@ -95,7 +96,8 @@ body {
   border-radius: 50%;
 }
 
-.center-point::after {
+/* for black circle inside red one */
+.center-point::after { 
   content: '';
   background-color: var(--primary-color);
   width: 5px;

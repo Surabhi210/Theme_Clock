@@ -12,7 +12,7 @@ toggle.addEventListener('click', (e) => {
     const html = document.querySelector('html')
     if (html.classList.contains('dark')) {
         html.classList.remove('dark')
-        e.target.innerHTML = 'Dark mode'
+        e.target.innerHTML = 'Dark mode' // changes label of button
     } else {
         html.classList.add('dark')
         e.target.innerHTML = 'Light mode'
@@ -20,7 +20,7 @@ toggle.addEventListener('click', (e) => {
 })
 
 function setTime() {
-    const time = new Date();
+    const time = new Date(); //current date and time
     const month = time.getMonth()
     const day = time.getDay()
     const date = time.getDate()
@@ -30,7 +30,9 @@ function setTime() {
     const seconds = time.getSeconds()
     const ampm = hours >= 12 ? 'PM' : 'AM'
 
-    hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 12, 0, 360)}deg)`
+    hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(hoursForClock, 0, 12, 0, 360)}deg)` //The scale() function turns an hour (0–12) into an angle (0–360°).
+    //transform property changes the position/rotation/scale of an element in 2D or 3D space.
+    //anonymous id ..google doc for explaination!!!
     minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(minutes, 0, 60, 0, 360)}deg)`
     secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(seconds, 0, 60, 0, 360)}deg)`
 
